@@ -1,3 +1,4 @@
+#include <fs_volume.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <Application.h>
@@ -431,7 +432,7 @@ void SeekerWindow::VolumePopUp(BMessage *message)
 	else if(result==iVolumePopUpUnmountItem)
 	{
 		item->RequestScanTerminate();
-		unmount(item->File()->PathDesc());
+		fs_unmount_volume(item->File()->PathDesc(), 0);
 	}
 
 	if(!iVolumePopUpEditNameItem->IsEnabled())
