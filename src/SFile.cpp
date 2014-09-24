@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
 
 #include <Entry.h>
 #include <Directory.h>
@@ -9,7 +10,6 @@
 #include <Alert.h>
 #include <String.h>
 
-#include "SafeTime.h"
 #include "PrintDebugTools.h"
 #include "SFile.h"
 
@@ -457,10 +457,8 @@ time_t SFile::ModifiedTime()
 
 struct tm SFile::ModifiedTm()
 {
-	struct tm dtTmModified;
-	Safe_localtime(ModifiedTime(), &dtTmModified);
-	
-	return dtTmModified;
+	time_t time = ModifiedTime();
+	return *localtime(&time);
 }
 
 void SFile::ModifiedTmDesc(char *strg)
@@ -475,10 +473,8 @@ time_t SFile::CreatedTime()
 
 struct tm SFile::CreatedTm()
 {
-	struct tm dtTmCreated;
-	Safe_localtime(CreatedTime(), &dtTmCreated);
-
-	return dtTmCreated;
+	time_t time = CreatedTime();
+	return *localtime(&time);
 }
 
 void SFile::CreatedTmDesc(char *strg)

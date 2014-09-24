@@ -1,6 +1,3 @@
-
-#include "SafeTime.h"
-
 #include "SeekerWindow.h"
 #include "SeekerApp.h"
 #include "AboutWindow.h"
@@ -21,9 +18,6 @@ SeekerApp::SeekerApp():BApplication(Seeker_APP_SIG)
 {
 	prefs=new Preferences("/boot/home/config/settings/SeekerPrefs");
 	prefs->Load();
-
-	// initialize SafeTime
-	InitSafeTime();
 
 	BRect rect;
 	if(prefs->FindRect("mainframe",&rect)!=B_OK)

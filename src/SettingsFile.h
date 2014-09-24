@@ -5,6 +5,7 @@
 #define _SETTINGSFILE_H_
 
 #include <Message.h>
+#include <File.h>
 #include <FindDirectory.h>
 #include <Path.h>
 

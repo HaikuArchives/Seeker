@@ -1,11 +1,7 @@
-#ifdef __MWERKS__
-#include <alloca.h>
-#else
-#include <alloc.h>
-#endif
-
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 
 #include <Application.h>
 #include <Window.h>
@@ -25,7 +21,6 @@
 
 #include "Colors.h"
 #include "CLVColumn.h"
-#include "SafeTime.h"
 
 #include "SeekerWindow.h"
 #include "StatusWindow.h"
@@ -807,20 +802,21 @@ void SFileView::LoadColumnSettings()
 			// All this crazy stuff here sets the sorting for each column
 			// while only doing the sort the very last time and reversing
 			// the sort order if sort is set to Descending
+			// FIXME: Removed
 			if(temp8>0)
 			{
 				if(i==0)
-					SetSortKey(0,false);
+					SetSortKey(0);
 				else
 				{
 					if(i==7)
-						AddSortKey(i,(temp8==2)?false:true);
+						AddSortKey(i);
 					else
-						AddSortKey(i,false);
+						AddSortKey(i);
 				}
 
 				if(temp8==2)
-					ReverseSortMode(i,false || i==7);
+					ReverseSortMode(i);
 			}
 		}
 
