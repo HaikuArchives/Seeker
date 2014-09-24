@@ -1,11 +1,7 @@
-#ifdef __MWERKS__
-#include <alloca.h>
-#else
-#include <alloc.h>
-#endif
-
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <Application.h>
 #include <Window.h>
 #include <Region.h>

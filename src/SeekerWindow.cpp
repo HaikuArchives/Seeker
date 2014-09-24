@@ -1,6 +1,7 @@
 #include <fs_volume.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <strings.h>
 #include <Application.h>
 #include <Menu.h>
 #include <MenuItem.h>

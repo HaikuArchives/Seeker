@@ -10,7 +10,6 @@
 #include "SeekerApp.h"
 #include "Preferences.h"
 #include "Colors.h"
-#include "SafeTime.h"
 
 #include "SeekerWindow.h"
 #include "SFileView.h"
