@@ -58,7 +58,7 @@ IconMenuItem::IconMenuItem(const char *label, BMessage *message,
 		fDeviceIcon(NULL)
 {
 	if (nodeInfo) {
-		fDeviceIcon = new BBitmap(BRect(0, 0, which - 1, which - 1), B_COLOR_8_BIT);
+		fDeviceIcon = new BBitmap(BRect(0, 0, which - 1, which - 1), B_RGBA32);
 		if (nodeInfo->GetTrackerIcon(fDeviceIcon, B_MINI_ICON)) {
 			delete fDeviceIcon;
 			fDeviceIcon = NULL;
@@ -77,7 +77,7 @@ IconMenuItem::IconMenuItem(const char *label, BMessage *message,
 		fDeviceIcon(NULL)
 {
 	BMimeType mime(iconType);
-	fDeviceIcon = new BBitmap(BRect(0, 0, which - 1, which - 1), B_COLOR_8_BIT);
+	fDeviceIcon = new BBitmap(BRect(0, 0, which - 1, which - 1), B_RGBA32);
 
 	if (mime.GetIcon(fDeviceIcon, which) != B_OK) {
 		delete fDeviceIcon;
@@ -96,7 +96,7 @@ IconMenuItem::IconMenuItem(BMenu *submenu, BMessage *message,
 		fDeviceIcon(NULL)
 {
 	BMimeType mime(iconType);
-	fDeviceIcon = new BBitmap(BRect(0, 0, which - 1, which - 1), B_COLOR_8_BIT);
+	fDeviceIcon = new BBitmap(BRect(0, 0, which - 1, which - 1), B_RGBA32);
 
 	if (mime.GetIcon(fDeviceIcon, which) != B_OK) {
 		delete fDeviceIcon;

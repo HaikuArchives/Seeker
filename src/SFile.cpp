@@ -199,7 +199,7 @@ BBitmap* SFile::SmallIcon()
 	if(!iSmallIcon) 
 	{
 		BRect iconBounds(0.0, 0.0, 15.0, 15.0);
-		iSmallIcon=new BBitmap(iconBounds, B_COLOR_8_BIT);	
+		iSmallIcon=new BBitmap(iconBounds, B_RGBA32);	
 
 		// We create a BEntry first because if file is a symlink,
 		// then we want the link's target's icon
@@ -228,7 +228,7 @@ BBitmap* SFile::LargeIcon()
 	if(!iLargeIcon)
 	{
 		BRect iconBounds(0.0, 0.0, 31.0, 31.0);
-		iLargeIcon=new BBitmap(iconBounds, B_COLOR_8_BIT);	
+		iLargeIcon=new BBitmap(iconBounds, B_RGBA32);	
 
 		// We create a BEntry first because if file is a symlink,
 		// then we want the link's target's icon
