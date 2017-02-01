@@ -1211,11 +1211,11 @@ void SeekerWindow::MessageReceived(BMessage* message)
 void SeekerWindow::RefreshTrackerAddons(void)
 {
 	// empty tracker addon menu
-	BMenuItem *mitem=iTrackerAddonMenu->RemoveItem(0L);
+	BMenuItem *mitem=iTrackerAddonMenu->RemoveItem((int32)0);
 	while(mitem)
 	{
 		delete mitem;
-		mitem=iTrackerAddonMenu->RemoveItem(0L);
+		mitem=iTrackerAddonMenu->RemoveItem((int32)0);
 	}
 	
 	// iterate through /boot/beos/system/addons/Tracker
