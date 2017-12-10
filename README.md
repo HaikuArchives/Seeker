@@ -1,5 +1,7 @@
 Seeker 1.0 Beta 6
 
+![Seeker screenshot](Seeker.png "Seeker")
+
 A file management program similar to Windows Explorer and a revival of the application Pioneer.
 
 The goal for Seeker is to provide an alternate means of file management for BeOS, providing easy interaction with Tracker and Terminal and allowing the user to work. It's currently quite useful as it is, and more features are planned for the future.
