@@ -1,4 +1,5 @@
-Seeker 1.0 Beta 6
+Seeker 1.0 
+============
 
 ![Seeker screenshot](Seeker.png "Seeker")
 
