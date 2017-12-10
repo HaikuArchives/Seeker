@@ -1,4 +1,4 @@
-Seeker 1.0 
+Seeker
 ============
 
 A file management program similar to Windows Explorer and a revival of the application Pioneer.
