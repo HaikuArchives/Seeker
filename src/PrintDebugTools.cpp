@@ -431,14 +431,11 @@ void PrintStorageKitError(status_t error)
 		case B_FILE_ERROR:
 			printf("B_FILE_ERROR\n");
 			break;
-		case B_FILE_NOT_FOUND:
-			printf("B_FILE_NOT_FOUND\n");
+		case B_ENTRY_NOT_FOUND:
+			printf("B_ENTRY_NOT_FOUND\n");
 			break;
 		case B_FILE_EXISTS:
 			printf("B_FILE_EXISTS\n");
-			break;
-		case B_ENTRY_NOT_FOUND:
-			printf("B_ENTRY_NOT_FOUND\n");
 			break;
 		case B_NAME_TOO_LONG:
 			printf("B_NAME_TOO_LONG\n");
